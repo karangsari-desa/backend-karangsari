@@ -20,6 +20,10 @@ app.use(
   }),
 );
 
+app.use('/', (req, res) => {
+  res.status(200).json({ status: 'success', message: 'Welcome to the API' });
+});
+
 app.use(router);
 app.use(errorHandler);
 
