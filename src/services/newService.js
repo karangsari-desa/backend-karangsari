@@ -1,7 +1,7 @@
 import pool from '../db.js';
 
 export const getAllNews = async () => {
-  const res = await pool.query('SELECT * FROM news');
+  const res = await pool.query('SELECT * FROM news ORDER BY created_at DESC');
   return res.rows;
 };
 
